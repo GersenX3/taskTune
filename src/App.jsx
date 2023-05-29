@@ -19,6 +19,7 @@ function App() {
 
   return (
     <>
+    <div className='app'>
       <TodoCounter completed={16} total={20}/>
       <TodoSearch/>
       
@@ -34,6 +35,7 @@ function App() {
       </TodoList>
 
       <CreateTodoButton/>
+    </div>
     </>
   )
 }

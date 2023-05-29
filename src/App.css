@@ -1,0 +1,11 @@
+.app{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    background-color: #643843;
+    min-width: 360px;
+    max-width: 720px;
+    border-radius: 12px;
+    height: 100vh;
+}
