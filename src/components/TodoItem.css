@@ -1,0 +1,40 @@
+.item{
+    text-decoration: none;
+    width: 100%-1rem;
+    padding: 0.5rem;
+    border-color: #27374D;
+    background-color: #27374D;
+    border-radius: 5px;
+    margin: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0px 1px 10px rgba(32, 35, 41, 0.15);
+    text-shadow: 1px 0px 15px rgba(0,0,0,0.73);
+}
+.item--completed{
+    background-color: #9DB2BF;
+    text-decoration: line-through;
+}
+.item li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#palomita{
+    position: absolute;
+    margin-right: 16rem;
+}
+#palomita:hover{
+    cursor: pointer;
+}
+#tache{
+    position: absolute;
+    margin-left: 18rem;
+
+    color:  black;
+
+}
+#tache:hover{
+    color: red;
+    cursor: pointer;
+}

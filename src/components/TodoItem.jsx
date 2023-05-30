@@ -1,12 +1,15 @@
 import React from 'react'
+import "./TodoItem.css"
 
-function TodoItem({texto},{completed}){
+function TodoItem(props){
     return(
-      <li>
-        <span>V</span>
-        <p>{texto}</p>
-        <span>x</span>
-      </li>
+      <div className={`item ${props.completed && "item--completed"}`}>
+        <li>
+          <span id='palomita'>V</span>
+          <p>{props.texto}</p>
+          <span id='tache'>X</span>
+        </li>
+      </div>
     );
   }
 

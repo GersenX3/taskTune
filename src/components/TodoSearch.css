@@ -1,0 +1,22 @@
+.buscador{
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    height: 2rem;
+}
+.buscador input{
+    padding: 2px;
+    font-size: 20px;
+    border-width: 1px;
+    border-color: #cccccc;
+    background-color: #FFFFFF;
+    color: #526D82;
+    border-style: solid;
+    border-radius: 5px;
+    height: 2rem;
+    text-align: center;
+}
+.buscador input:focus {
+    outline-color: #526D82;
+  }

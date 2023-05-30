@@ -1,10 +1,13 @@
-h1{
-    width: 80%;
-    background-color: #E7CBCB;
-    font-size: 2rem;
+.title{
+    width: 100%;
     text-align: center;
-    padding: 1rem;
-    border-radius: 12px;
-    margin-top: 3rem;
-    height: 10rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.title span{
+    font-weight:1000;
+}
+#titulo{
+    font-size: 2rem;
+    color: black;
 }

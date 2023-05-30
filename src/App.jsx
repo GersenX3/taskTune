@@ -11,10 +11,10 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const defaultTodos=[
-    {text: "Cortar cebolla", completed: true},
-    {text: "Bailar mambo", completed: false},
-    {text: "Gobernar el mundo", completed: false},
-    {text: "Robar un banco", completed: false}
+    {text: "Cortar cebolla", finished: true},
+    {text: "Bailar mambo", finished: true},
+    {text: "Gobernar el mundo", finished: false},
+    {text: "Robar un banco", finished: false}
   ];
 
   return (
@@ -28,7 +28,7 @@ function App() {
           <TodoItem
           key={todo.text} 
           texto={todo.text} 
-          completed={todo.completed}
+          completed={todo.finished}
           />
         ))}
 

@@ -1,9 +1,9 @@
 /* 
   colores:
-  #643843
-  #99627A
-  #C88EA7
-  #E7CBCB
+  #27374D
+  #526D82
+  #9DB2BF
+  #DDE6ED
 */
 
 *{
@@ -14,8 +14,12 @@
 body{
   font-size: 62.5%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #E7CBCB;
+  background-color: #27374D;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  color: #fff;
+}
+body h1{
+  color: #27374D;
 }

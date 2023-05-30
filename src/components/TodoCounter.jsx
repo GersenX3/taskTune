@@ -5,7 +5,10 @@ import "../components/TodoCounter.css"
 function TodoCounter({total,completed}) {
   return (
     <>
-      <h1>You have completed {completed} of {total} To do's</h1>
+      <div className='title'>
+        <h1 id='titulo'>To do app</h1>
+      <h1>You have completed <span>{completed}</span> of <span>{total}</span> To do's</h1>
+      </div>
     </>
   )
 }
