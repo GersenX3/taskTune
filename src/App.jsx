@@ -11,6 +11,10 @@ const defaultTodos=[
   {text: "Cortar cebolla", finished: true},
   {text: "Bailar mambo", finished: true},
   {text: "Gobernar el mundo", finished: false},
+  {text: "1", finished: false},
+  {text: "2", finished: false},
+  {text: "3", finished: false},
+  {text: "4", finished: false},
   {text: "Robar un banco", finished: false}
 ];
 
@@ -25,6 +29,11 @@ function App() {
   console.log("Buscando: "+searchValue);
   const [count, setCount] = useState(0)
 
+  const searchedTodos = todos.filter(
+    (todo) =>{
+      return todo.text.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase());
+    }
+  );
 
   return (
     <>
@@ -36,7 +45,7 @@ function App() {
       />
       
       <TodoList>
-        {defaultTodos.map(todo =>(
+        {searchedTodos.map(todo =>(
           <TodoItem
           key={todo.text} 
           texto={todo.text} 
