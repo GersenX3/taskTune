@@ -40,7 +40,12 @@ function App() {
     const todoIndex = newTodos.findIndex(
       (todo) => todo.text == text
     );
-    newTodos[todoIndex].finished = true;
+    if(newTodos[todoIndex].finished==true){
+      newTodos[todoIndex].finished = false;
+    }
+    else{
+      newTodos[todoIndex].finished = true;
+    }
     setTodos(newTodos);
   }
 

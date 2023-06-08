@@ -1,5 +1,8 @@
 import React from 'react'
 import "./TodoItem.css"
+import { Palomita } from './svg/palomita';
+import { Tache } from './svg/Tache';
+
 
 function TodoItem(props){
     return(
@@ -8,12 +11,12 @@ function TodoItem(props){
           <span 
           id='palomita'
           onClick={props.onComplete}
-          >V</span>
+          ><Palomita/></span>
           <p>{props.texto}</p>
           <span
           id='tache'
           onClick={props.onDelete}
-          >X</span>
+          ><Tache/></span>
         </li>
       </div>
     );
