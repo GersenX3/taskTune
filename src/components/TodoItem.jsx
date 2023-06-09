@@ -16,7 +16,7 @@ function TodoItem(props){
           <span
           id='tache'
           onClick={props.onDelete}
-          ><Tache/></span>
+          ><Tache color={"#ffffffff"}/></span>
         </li>
       </div>
     );
