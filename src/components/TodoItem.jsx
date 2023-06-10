@@ -1,6 +1,6 @@
 import React from 'react'
 import "./TodoItem.css"
-import { Palomita } from './svg/palomita';
+import { Palomita } from './svg/Palomita';
 import { Tache } from './svg/Tache';
 
 
