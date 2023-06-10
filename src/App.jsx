@@ -51,7 +51,7 @@ function App() {
   );
 
     const saveTodos = (newTodos) =>{
-      localStorage.setItem("TODOS_1",JSON.stringify(newTodos));
+      localStorage.setItem("TODOS_V1",JSON.stringify(newTodos));
       setTodos(newTodos);
     }
 
