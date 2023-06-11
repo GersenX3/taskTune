@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./TodoSearch.css"
+import "../css/TodoSearch.css"
 
 function TodoSearch({searchValue,setSearchValue}) {
 

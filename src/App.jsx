@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import {TodoCounter} from "./components/TodoCounter";
-import {TodoSearch} from "./components/TodoSearch";
-import {TodoList} from "./components/TodoList";
-import {CreateTodoButton} from "./components/CreateTodoButton";
-import { TodoItem } from './components/TodoItem';
+import {TodoCounter} from "./components/jsx/TodoCounter";
+import {TodoSearch} from "./components/jsx/TodoSearch";
+import {TodoList} from "./components/jsx/TodoList";
+import {CreateTodoButton} from "./components/jsx/CreateTodoButton";
+import { TodoItem } from './components/jsx/TodoItem';
 import './App.css'
 
 // const defaultTodos=[
