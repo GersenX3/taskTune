@@ -1,7 +1,7 @@
 import React from 'react'
 import "../css/TodoItem.css"
-import { Palomita } from '../svg/Palomita';
-import { Tache } from '../svg/Tache';
+import { Palomita } from '../../svg/Palomita';
+import { Tache } from '../../svg/Tache';
 
 
 function TodoItem(props){
