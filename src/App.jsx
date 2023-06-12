@@ -1,37 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
-import {TodoCounter} from "./components/jsx/TodoCounter";
-import {TodoSearch} from "./components/jsx/TodoSearch";
-import {TodoList} from "./components/jsx/TodoList";
-import {CreateTodoButton} from "./components/jsx/CreateTodoButton";
-import { TodoItem } from './components/jsx/TodoItem';
 import { useLocalStorage } from './hooks/useLocalStorage';
+import { AppUI } from './AppUI';
 import './App.css'
-
-// const defaultTodos=[
-//   {text: "Cortar cebolla", finished: true},
-//   {text: "Bailar mambo", finished: true},
-//   {text: "Gobernar el mundo", finished: false},
-//   {text: "1", finished: false},
-//   {text: "2", finished: false},
-//   {text: "3", finished: false},
-//   {text: "4", finished: false},
-//   {text: "Robar un banco", finished: false}
-// ];
-
-//localStorage.setItem("TODOS_V1", JSON.stringify(defaultTodos));
-// localStorage.removeItem("TODOS_V1");
-
 
 
 function App() {
-
   const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
   const completedTodos=(todos.filter(todo => !!todo.finished)).length;
   const totalTodos=(todos).length;
 
   const [searchValue, setSearchValue] = React.useState('');
-  console.log("Buscando: "+searchValue);
   const [count, setCount] = useState(0)
 
   const searchedTodos = todos.filter(
@@ -63,30 +42,30 @@ function App() {
     saveTodos(newTodos);
   }
 
+
+  console.log("Log 1");
+
+  React.useEffect(
+    () => {
+      console.log("Looooog 2");
+    },
+    [totalTodos]
+  );
+
+  console.log("Log 3");
+
+
   return (
     <>
-    <div className='app'>
-      <TodoCounter completed={completedTodos} total={totalTodos}/>
-      <TodoSearch
-      searchValue={searchValue}
-      setSearchValue={setSearchValue}
-      />
-      
-      <TodoList>
-        {searchedTodos.map(todo =>(
-          <TodoItem
-          key={todo.text} 
-          texto={todo.text} 
-          completed={todo.finished}
-          onComplete={() => completeTodo(todo.text)}
-          onDelete={() => deleteTodo(todo.text)}
-          />
-        ))}
-
-      </TodoList>
-
-      <CreateTodoButton/>
-    </div>
+    <AppUI
+          completedTodos={completedTodos}
+          totalTodos={totalTodos}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          searchedTodos={searchedTodos}
+          completeTodo={completeTodo}
+          deleteTodo={deleteTodo}
+    />
     </>
   )
 }
@@ -94,4 +73,19 @@ function App() {
 
 
 export default App
+//Codigo para definir todos en la consola
 
+//  const defaultTodos=[
+//     {text: "Cortar cebolla", finished: true},
+//     {text: "Bailar mambo", finished: true},
+//     {text: "Gobernar el mundo", finished: false},
+//     {text: "1", finished: false},
+//     {text: "2", finished: false},
+//     {text: "3", finished: false},
+//     {text: "4", finished: false},
+//     {text: "Robar un banco", finished: false}
+//   ];
+
+//  localStorage.setItem("TODOS_V1", JSON.stringify(defaultTodos));
+
+// localStorage.removeItem("TODOS_V1")
