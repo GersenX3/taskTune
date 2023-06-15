@@ -21,13 +21,14 @@ function useLocalStorage(itemName, initialValue){
           setItem(parsedItems);
         }
   
-        setLoading(false);
+        setLoading(true);
       }
       catch(error){
         setError(error);
         setLoading(false);
       }
-    }, []);
+    }
+    , []);
   
     const saveItem = (newItem) =>{
       localStorage.setItem(itemName,JSON.stringify(newItem));

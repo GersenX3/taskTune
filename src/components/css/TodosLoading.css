@@ -1,0 +1,79 @@
+.loadingContainer{
+    display: flex;
+    position: absolute;
+    justify-content:center;
+    align-items:center;
+
+    z-index: 2;
+    margin-top: 3rem;
+    height: 10rem;
+    width: 360px;
+}
+.loadingContainer .loadingDot{
+    position: relative;
+    background-color: #526D82;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    margin: 0.5rem;
+
+}
+#firstDot{
+    animation-name: elevate2;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes elevate1 {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -10px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  #secondDot{
+    animation-name: elevate1;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes elevate2 {
+    0% {
+      top: 0;
+    }
+    25% {
+      top: -3px;
+    }
+    50% {
+        top: -10px;
+      }
+    100% {
+      top: 0;
+    }
+  }
+
+  #thirdDot{
+    animation-name: elevate2;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes elevate3 {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -10px;
+    }
+    100% {
+      top: 0;
+    }
+  }

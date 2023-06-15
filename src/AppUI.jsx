@@ -2,6 +2,9 @@ import React from 'react'
 import {TodoCounter} from "./components/jsx/TodoCounter";
 import {TodoSearch} from "./components/jsx/TodoSearch";
 import {TodoList} from "./components/jsx/TodoList";
+import {TodosLoading} from "./components/jsx/TodosLoading";
+import {TodosError} from "./components/jsx/TodosError";
+import { TodosEmpty } from './components/jsx/TodosEmpty';
 import {CreateTodoButton} from "./components/jsx/CreateTodoButton";
 import { TodoItem } from './components/jsx/TodoItem';
 
@@ -25,11 +28,11 @@ function AppUI({
     />
     
     <TodoList>
-      {loading && <p>Loading</p>}
-      {error && <p>Error</p>}
-      {(!loading && searchedTodos.length == 0) && <p>Create your first task!! 📈</p>}
+      {loading && <TodosLoading/>}
+      {error && <TodosError/>}
+      {(!loading && searchedTodos.length == 0) && <TodosEmpty/>}
 
-      {searchedTodos.map(todo =>(
+      {(!loading && !error) && searchedTodos.map(todo =>(
         <TodoItem
         key={todo.text} 
         texto={todo.text} 
