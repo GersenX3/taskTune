@@ -1,5 +1,6 @@
 .boton{
     position:absolute;
+	z-index: 2;
     width: 4rem;
     width: 360px;
 }

@@ -1,15 +1,23 @@
 import React from 'react'
 import "../css/CreateTodoButton.css"
+import { TodoContext } from '../../Context/TodoContext';
 
 function CreateTodoButton() {
+  const {
+    openModal,
+    setOpenModal,
+  } = React.useContext(TodoContext);
   return (
     <div className='boton'>
       <button 
       onClick={
-        (event) => {
-          console.log("Diste click");
-          console.log(event);
-          console.log(event.target);
+        () => {
+          if(openModal){
+            setOpenModal(false);
+          }
+          else{
+            setOpenModal(true);
+          }
         }
       }
     ><span>+</span> Add a task</button>

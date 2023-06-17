@@ -1,0 +1,63 @@
+#blackout{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.formTodo{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    top: 23.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 13.5rem;
+    width: 21rem;
+    background-color: #526D82;
+    box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
+    -webkit-box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
+    -moz-box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
+}
+#divLabel{
+    margin-top: 1rem;
+}
+.formTodo label{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.formTodo textarea{
+    margin-top: 1rem;
+    padding: 2px;
+    font-size: 20px;
+    background-color: #FFFFFF;
+    color: #526D82;
+    height: 5rem;
+    text-align: center;
+    width: 15rem;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    resize: none;
+}
+.formTodo button{
+    cursor: pointer;
+    border: 0px;
+    padding: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: bolder;
+    margin: 1rem 0.9rem;
+}
+.formTodo .cancel{
+    background-color: #27374D;
+    color: #ffffff;
+}
+.formTodo .create{
+    background-color: #DDE6ED;
+    color: #27374D;
+    box-shadow: 0 0px 3px #DDE6ED;
+}
