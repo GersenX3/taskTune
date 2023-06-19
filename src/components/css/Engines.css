@@ -1,0 +1,27 @@
+#firstEngine {
+    transform-origin: 94px 94px;
+    animation: rotate1 10s infinite linear;
+  }
+  
+  #secondEngine {
+    transform-origin: 208px 204px;
+    animation: rotate2 10s infinite linear;
+  }
+  
+  @keyframes rotate1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
