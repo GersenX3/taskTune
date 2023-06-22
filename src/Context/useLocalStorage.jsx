@@ -21,7 +21,9 @@ function useLocalStorage(itemName, initialValue){
           setItem(parsedItems);
         }
   
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
       }
       catch(error){
         setError(error);

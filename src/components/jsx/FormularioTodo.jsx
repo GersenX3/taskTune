@@ -10,10 +10,22 @@ import "../css/FormularioTodo.css"
 
       const onSubmit = (event)=>{
         event.preventDefault();
-        addTodo(newTodoValue);
+        if(newTodoValue.length==0){
+          console.log("No se agrego");
+        }
+        else{
+          addTodo(newTodoValue);
+        }
         setOpenModal(false);
     };
     const [newTodoValue, setNewTodoValue] = React.useState("");
+
+
+    const handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+        onSubmit(event);
+      }
+    };
 
   return (
     <>
@@ -21,11 +33,14 @@ import "../css/FormularioTodo.css"
         onClick={() => {setOpenModal(false);}}
         ></div>
         <div className='formTodo'>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}
+                  onKeyDown={handleKeyPress}
+            >
                 <div id='divLabel'>
                 <label htmlFor="">Write your new task</label>
                 </div>
                 <textarea
+                    maxLength="24"
                     placeholder='Play Catsoul'
                     value={newTodoValue}
                     onChange={(event)=>{

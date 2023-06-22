@@ -46,7 +46,7 @@ function Engines(props) {
                   />
                   <path
                     fill="none"
-                    stroke="#526D82"
+                    stroke="#DDE6ED"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeOpacity={1}
