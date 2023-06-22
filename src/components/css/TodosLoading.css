@@ -1,12 +1,11 @@
 .loadingContainer{
     display: flex;
-    position: absolute;
     justify-content:center;
     align-items:center;
 
     z-index: 2;
     margin-top: 3rem;
-    height: 10rem;
+    height: 18.6rem;
     width: 360px;
 }
 .loadingContainer .loadingDot{
