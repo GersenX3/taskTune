@@ -14,7 +14,14 @@
 }
 .item--completed{
     background-color: #9DB2BF;
+    transition: all 0.2s ease;
+}
+.item--completed p{
     text-decoration: line-through;
+    transition: all 0.2s ease;
+}
+.item--completed img{
+    filter: brightness(2);
     transition: all 0.2s ease;
 }
 .item li{
@@ -32,11 +39,21 @@
 #tache{
     position: absolute;
     margin-left: 18rem;
-
     color:  black;
-
 }
 #tache:hover{
-    color: red;
     cursor: pointer;
+}
+.songInfo{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.songInfo img{
+    height: 32px;
+    padding-left: 0.7rem;
+}
+.songInfo a{
+    padding-top: 0.4rem;
 }

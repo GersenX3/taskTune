@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const TodoContext = React.createContext();
 
 function TodoProvider ({children}){
+    const [token,setToken] = useState("");
+    const [accessToken, setAccessToken] = useState("");
+
+
     const {
         item: todos,
         saveItem: saveTodos,
@@ -74,6 +78,10 @@ function TodoProvider ({children}){
                 openModal,
                 setOpenModal,
                 addTodo,
+                token,
+                setToken,
+                accessToken,
+                setAccessToken
             }
         }>
             {children}

@@ -12,7 +12,7 @@ import { Modal } from "./components/jsx/Modal";
 import {FormularioTodo} from "./components/jsx/FormularioTodo";
 
 
-function AppUI() {
+function AppUI({ accessToken }) {
 
   const {
     loading,
@@ -21,6 +21,7 @@ function AppUI() {
     completeTodo,
     deleteTodo,
     openModal,
+    setToken
   } = React.useContext(TodoContext);
 
   return (
@@ -28,12 +29,13 @@ function AppUI() {
     <TodoCounter/>
     <TodoSearch/>
 
-    <TodoList>
+    <TodoList accessToken={accessToken}>
       {loading && <TodosLoading/>}
       {error && <TodosError/>}
       {(!loading && searchedTodos.length == 0) && <TodosEmpty/>}
       {(!loading && !error) && searchedTodos.map(todo =>(
         <TodoItem
+          accessToken = {accessToken}
           key={todo.text} 
           texto={todo.text} 
           completed={todo.finished}

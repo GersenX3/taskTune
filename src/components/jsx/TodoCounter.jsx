@@ -12,7 +12,7 @@ function TodoCounter() {
   return (
     <>
       <div className='title'>
-        <h1 id='titulo'>To do app</h1>
+        <h1 id='titulo'>Task tune</h1>
         {(completedTodos==totalTodos) && 
                 <h1>Finished all your tasks</h1>
         }

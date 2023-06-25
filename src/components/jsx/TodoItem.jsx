@@ -1,12 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../css/TodoItem.css"
-import { Palomita } from '../../svg/Palomita';
-import { Tache } from '../../svg/Tache';
+import { Palomita } from '../svg/Palomita';
+import { Tache } from '../svg/Tache';
+import { Spotify } from '../svg/Spotify';
 
 
 function TodoItem(props){
+  const [album,setAlbum]= useState("https://euroceramica.co/wp-content/uploads/2021/11/EUROCERAMICA-BARRANQUILLA-BLANCO-50X50PRODUCTO-300x300.jpg");
+  const [cancion,setCancion]= useState("Recomendacion");
+  const [artista,setArtista]= useState("Artista");
+  const [enlace,setEnlace]= useState("");
+
+
+  var token = props.accessToken;
+  
+  useEffect(()=>{
+
+    //Obtener el nombre de la cancio, link y foto.
+    var parameters = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + token
+      }
+    }
+    var track = fetch("https://api.spotify.com/v1/search?q=" + props.texto + "&type=track&limit=1", parameters)
+      .then(response => response.json())
+      .then((data) => {
+      setAlbum(data.tracks.items[0].album.images[2].url);
+      setCancion(data.tracks.items[0].name);
+      setArtista(data.tracks.items[0].artists[0].name);
+      setEnlace(data.tracks.items[0].external_urls.spotify);
+      })
+  },[])
+  
     return(
       <div className={`item ${props.completed && "item--completed"}`}>
+        <div>
         <li>
           <span 
           id='palomita'
@@ -16,8 +46,16 @@ function TodoItem(props){
           <span
           id='tache'
           onClick={props.onDelete}
-          ><Tache color={"#ffffffff"}/></span>
+          ><Tache color={"#fff"}/></span>
         </li>
+        </div>
+        <div className='songInfo'>
+          <img src={album} alt="" />
+          <span> {cancion} | {artista}</span>
+          <a href={enlace} target="_blank"><Spotify 
+          fill={"#fff"}
+          width={"4.5rem"}/></a>
+        </div>
       </div>
     );
   }
