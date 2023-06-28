@@ -18,7 +18,7 @@
     transform: translate(-50%, -50%);
     height: 13.5rem;
     width: 21rem;
-    background-color: #526D82;
+    background-color: #1a1a1a;
     box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
     -webkit-box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
     -moz-box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
@@ -35,7 +35,7 @@
     padding: 2px;
     font-size: 20px;
     background-color: #FFFFFF;
-    color: #526D82;
+    color: #242424;
     height: 5rem;
     text-align: center;
     width: 15rem;
@@ -53,11 +53,11 @@
     margin: 1rem 0.9rem;
 }
 .formTodo .cancel{
-    background-color: #27374D;
+    background-color: #242424;
     color: #ffffff;
 }
 .formTodo .create{
     background-color: #DDE6ED;
-    color: #27374D;
+    color: #242424;
     box-shadow: 0 0px 3px #DDE6ED;
 }

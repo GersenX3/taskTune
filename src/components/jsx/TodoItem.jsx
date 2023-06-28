@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "../css/TodoItem.css"
 import { Palomita } from '../svg/Palomita';
 import { Tache } from '../svg/Tache';
-import { Spotify } from '../svg/Spotify';
+
 
 
 function TodoItem(props){
@@ -52,9 +52,9 @@ function TodoItem(props){
         <div className='songInfo'>
           <img src={album} alt="" />
           <span> {cancion} | {artista}</span>
-          <a href={enlace} target="_blank"><Spotify 
-          fill={"#fff"}
-          width={"4.5rem"}/></a>
+          <a href={enlace} target="_blank">
+            <img src={'/img/spotifyLogo.png'} alt="Spotify Logo" />
+          </a>
         </div>
       </div>
     );

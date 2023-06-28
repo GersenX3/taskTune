@@ -9,14 +9,15 @@
     padding: 2px;
     font-size: 20px;
     border-width: 1px;
-    border-color: #cccccc;
-    background-color: #FFFFFF;
-    color: #526D82;
+    border-color: #242424;
+    background-color: #242424;
+    color: #fff;
     border-style: solid;
     border-radius: 5px;
     height: 2rem;
     text-align: center;
 }
 .buscador input:focus {
-    outline-color: #526D82;
+    outline-color: #fff;
+    outline-width: 0.5px;
   }

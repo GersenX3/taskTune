@@ -2,7 +2,6 @@
 	position: relative;
 	/* Resto de las propiedades CSS para el div #root */
   }
-  
   .boton {
 	position: absolute;
 	width: 100%;
@@ -11,10 +10,10 @@
   .boton button {
 	width: 100%;
 	height: 4rem;
-	background-color: #526D82;
+	background-color: #1a1a1a;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	border: 1px solid #526D82;
+	border: 1px solid #1a1a1a;
 	display: block;
 	cursor: pointer;
 	color: #ffffff;
@@ -24,7 +23,8 @@
   }
   
   .boton button:hover {
-	background-color: #455d6e;
+	background-color: #242424;
+	border: #242424;
   }
   
   .boton button:active {
