@@ -6,13 +6,24 @@ import { TodoContext } from '../../Context/TodoContext';
 function TodoCounter() {
   const {
     completedTodos,
-    totalTodos
+    totalTodos,
+    openModal,
+    setOpenModal,
+    buttonInfo,
+    setButtonInfo
   } = React.useContext(TodoContext);
 
   return (
     <>
+      <button id='infoButton'
+      onClick={()=>{
+        setOpenModal(!openModal);
+        setButtonInfo(true);
+      }}
+      >?</button>
       <div className='title'>
         <h1 id='titulo'>Task tune</h1>
+
         {(completedTodos==totalTodos) && 
                 <h1>Finished all your tasks</h1>
         }

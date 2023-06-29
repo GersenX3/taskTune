@@ -11,3 +11,22 @@
     font-size: 2rem;
     color: #fff;
 }
+#infoButton{
+    position: absolute;
+    padding: 0.5rem;
+	background-color: #fff;
+    border-radius: 5px;
+    right: 1.8rem;
+    top: 3.5rem;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0px 1px 10px rgba(32, 35, 41, 0.15);
+    text-shadow: 1px 0px 15px rgba(0,0,0,0.73);
+    color: #1a1a1a;
+    border: 0;
+    cursor: pointer;
+    font-weight: bolder;
+}
+#infoButton:hover{
+    background-color: #ffffffc0;
+}

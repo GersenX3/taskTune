@@ -10,6 +10,7 @@ import { TodoItem } from './components/jsx/TodoItem';
 import { TodoContext } from './Context/TodoContext';
 import { Modal } from "./components/jsx/Modal";
 import {FormularioTodo} from "./components/jsx/FormularioTodo";
+import { Info } from './components/jsx/Info';
 
 
 function AppUI({ accessToken }) {
@@ -21,7 +22,8 @@ function AppUI({ accessToken }) {
     completeTodo,
     deleteTodo,
     openModal,
-    setToken
+    buttonTask,
+    buttonInfo
   } = React.useContext(TodoContext);
 
   return (
@@ -47,11 +49,18 @@ function AppUI({ accessToken }) {
 
     <CreateTodoButton/>
     
-    {openModal && (
+    {(openModal && buttonTask) && (
       <Modal>
         <FormularioTodo/>
       </Modal>
     )}
+
+    {(openModal && buttonInfo) && (
+      <Modal>
+        <Info/>
+      </Modal>
+    )}
+
 
   </div>
   )

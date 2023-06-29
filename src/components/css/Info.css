@@ -1,0 +1,44 @@
+.blackdiv{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.781);
+    width: 100vw;
+    height: 100vh;
+}
+.info-container{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    justify-content: center;
+}
+.info-container h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+.info-container p{
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #a7a7a7;
+}
+.info-container button{
+    background-color: #DDE6ED;
+    color: #242424;
+    box-shadow: 0 0px 3px #DDE6ED;
+    cursor: pointer;
+    border: 0px;
+    padding: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: bolder;
+    margin: 0 auto;
+    margin-top: 1rem;
+
+
+}

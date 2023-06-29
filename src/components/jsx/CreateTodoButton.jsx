@@ -6,18 +6,16 @@ function CreateTodoButton() {
   const {
     openModal,
     setOpenModal,
+    buttonTask,
+    setButtonTask,
   } = React.useContext(TodoContext);
   return (
     <div className='boton'>
       <button 
       onClick={
         () => {
-          if(openModal){
-            setOpenModal(false);
-          }
-          else{
-            setOpenModal(true);
-          }
+          setOpenModal(!openModal);
+          setButtonTask(!buttonTask);
         }
       }
     ><span>+</span> Add a task</button>

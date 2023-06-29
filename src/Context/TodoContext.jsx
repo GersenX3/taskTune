@@ -19,8 +19,10 @@ function TodoProvider ({children}){
       const totalTodos=(todos).length;
 
       const [openModal, setOpenModal] = React.useState(false);
+      const [buttonTask, setButtonTask] =React.useState(false);
+      const [buttonInfo, setButtonInfo] =React.useState(false);
 
-    
+      
       const [searchValue, setSearchValue] = React.useState('');
 
     
@@ -77,6 +79,10 @@ function TodoProvider ({children}){
                 deleteTodo,
                 openModal,
                 setOpenModal,
+                buttonInfo,
+                setButtonInfo,
+                buttonTask,
+                setButtonTask,
                 addTodo,
                 token,
                 setToken,

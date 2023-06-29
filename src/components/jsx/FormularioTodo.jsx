@@ -6,6 +6,8 @@ import "../css/FormularioTodo.css"
     const {
         addTodo,
         setOpenModal,
+        buttonTask,
+        setButtonTask,
       } = React.useContext(TodoContext);
 
       const onSubmit = (event)=>{
@@ -17,6 +19,7 @@ import "../css/FormularioTodo.css"
           addTodo(newTodoValue);
         }
         setOpenModal(false);
+        setButtonTask(false);
     };
     const [newTodoValue, setNewTodoValue] = React.useState("");
 
@@ -30,7 +33,10 @@ import "../css/FormularioTodo.css"
   return (
     <>
         <div id='blackout'
-        onClick={() => {setOpenModal(false);}}
+        onClick={() => {
+          setOpenModal(false);
+          setButtonTask(false);
+        }}
         ></div>
         <div className='formTodo'>
             <form onSubmit={onSubmit}
@@ -48,7 +54,10 @@ import "../css/FormularioTodo.css"
                       }}
                 />
                 <button
-                onClick={() => {setOpenModal(false);}}
+                onClick={() => {
+                  setOpenModal(false);
+                  setButtonTask(false);
+                }}
                 type='button'
                 className='cancel'>Cancel</button>
                 <button
