@@ -1,6 +1,6 @@
 .item{
     text-decoration: none;
-    width: 100%-1rem;
+    width: 350px;
     padding: 0.5rem;
     background: rgb(41,41,41);
 
@@ -11,6 +11,11 @@
     box-shadow: 0px 1px 10px rgba(32, 35, 41, 0.15);
     text-shadow: 1px 0px 15px rgba(0,0,0,0.73);
     transition: all 1s ease;
+}
+@media(min-width: 300px) and (max-width: 400px){
+    .item{
+        width: 320px;
+    }
 }
 .item--completed{
     background: rgba(18,18,18,1);

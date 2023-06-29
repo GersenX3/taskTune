@@ -3,7 +3,8 @@
 	/* Resto de las propiedades CSS para el div #root */
   }
   .boton {
-	position: absolute;
+	margin-top: 1rem;
+	position: relative;
 	width: 100%;
   }
   
