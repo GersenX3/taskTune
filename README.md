@@ -3,7 +3,7 @@
 Welcome to Task tune, a task manager that will recommend a song for the task you are performing.
 
 ![Proyecto](./public/img/Task%20tune.png)
-Aqui va a estar el link
+Try it [here](https://tasktune.netlify.app/)
 
 # This application was developed with vite
 
