@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "../css/TodoItem.css"
 import { Palomita } from '../svg/Palomita';
 import { Tache } from '../svg/Tache';
@@ -12,19 +12,20 @@ function TodoItem(props){
   const [enlace,setEnlace]= useState("");
 
 
-  var token = props.accessToken;
-  
+
   useEffect(()=>{
+    let token = props.accessToken;
 
     //Obtener el nombre de la cancio, link y foto.
-    var parameters = {
+    let parameters = {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         "Authorization": "Bearer " + token
       }
     }
-    var track = fetch("https://api.spotify.com/v1/search?q=" + props.texto + "&type=track&limit=1", parameters)
+
+    fetch("https://api.spotify.com/v1/search?q=" + props.texto + "&type=track&limit=1", parameters)
       .then(response => response.json())
       .then((data) => {
       setAlbum(data.tracks.items[0].album.images[2].url);
@@ -32,7 +33,7 @@ function TodoItem(props){
       setArtista(data.tracks.items[0].artists[0].name);
       setEnlace(data.tracks.items[0].external_urls.spotify);
       })
-  },[])
+  }, [])
   
     return(
       <div className={`item ${props.completed && "item--completed"}`}>
@@ -52,7 +53,7 @@ function TodoItem(props){
         <div className='songInfo'>
           <img src={album} alt="" />
           <span> {cancion} | {artista}</span>
-          <a href={enlace} target="_blank">
+          <a href={enlace} target="_blank" rel="noreferrer">
             <img src={'/img/spotifyLogo.png'} alt="Spotify Logo" />
           </a>
         </div>

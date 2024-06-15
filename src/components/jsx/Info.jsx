@@ -5,7 +5,6 @@ import "../css/Info.css"
  function Info() {
     const {
         setOpenModal,
-        buttonInfo,
         setButtonInfo
       } = React.useContext(TodoContext);
   return (
@@ -19,7 +18,7 @@ import "../css/Info.css"
             {/* barra de busqueda */}
             <p>When you have a sea of tasks you can search for the one you need with a keyword, so you can mark it as completed or do whatever you need to do with it.<br/><br/></p>
             {/* Crea tu primer tarea */}
-            <p>That's pretty much it, now you just need to create your first task, close this window and get started!!!</p>
+            <p>That&apos;s pretty much it, now you just need to create your first task, close this window and get started!!!</p>
             <button
             onClick={() => {
               setOpenModal(false);

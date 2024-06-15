@@ -1,4 +1,3 @@
-import React from 'react'
 import { Engines } from '../svg/Engines'
 import '../css/TodosEmpty.css'
 

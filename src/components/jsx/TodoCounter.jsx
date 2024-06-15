@@ -9,7 +9,6 @@ function TodoCounter() {
     totalTodos,
     openModal,
     setOpenModal,
-    buttonInfo,
     setButtonInfo
   } = React.useContext(TodoContext);
 
@@ -28,7 +27,7 @@ function TodoCounter() {
                 <h1>Finished all your tasks</h1>
         }
         {(completedTodos!=totalTodos) && 
-                <h1>You have completed <span>{completedTodos}</span> of <span>{totalTodos}</span> To do's</h1>
+                <h1>You have completed <span>{completedTodos}</span> of <span>{totalTodos}</span> To do&apos;s</h1>
         }
       </div>
     </>

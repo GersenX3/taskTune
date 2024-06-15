@@ -6,7 +6,6 @@ import "../css/FormularioTodo.css"
     const {
         addTodo,
         setOpenModal,
-        buttonTask,
         setButtonTask,
       } = React.useContext(TodoContext);
 
