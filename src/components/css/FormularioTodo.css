@@ -1,4 +1,4 @@
-#blackout{
+#blackout {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -8,7 +8,7 @@
     background-color: rgba(0, 0, 0, 0.349);
 }
 
-.formTodo{
+.formTodo {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -19,22 +19,22 @@
     height: 13.5rem;
     width: 21rem;
     background-color: #1a1a1a;
-    box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
-    -webkit-box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
-    -moz-box-shadow: -1px 1px 25px 4px rgba(0,0,0,0.47);
+    box-shadow: -1px 1px 25px 4px rgba(0, 0, 0, 0.47);
+    -webkit-box-shadow: -1px 1px 25px 4px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: -1px 1px 25px 4px rgba(0, 0, 0, 0.47);
 }
-#divLabel{
+#divLabel {
     margin-top: 1rem;
 }
-.formTodo label{
+.formTodo label {
     font-size: 1.5rem;
     text-align: center;
 }
-.formTodo textarea{
+.formTodo textarea {
     margin-top: 1rem;
     padding: 2px;
     font-size: 20px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #242424;
     height: 5rem;
     text-align: center;
@@ -43,7 +43,7 @@
     border-radius: 2px;
     resize: none;
 }
-.formTodo button{
+.formTodo button {
     cursor: pointer;
     border: 0px;
     padding: 2rem;
@@ -52,12 +52,12 @@
     font-weight: bolder;
     margin: 1rem 0.9rem;
 }
-.formTodo .cancel{
+.formTodo .cancel {
     background-color: #242424;
     color: #ffffff;
 }
-.formTodo .create{
-    background-color: #DDE6ED;
+.formTodo .create {
+    background-color: #dde6ed;
     color: #242424;
-    box-shadow: 0 0px 3px #DDE6ED;
+    box-shadow: 0 0px 3px #dde6ed;
 }

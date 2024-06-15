@@ -1,4 +1,4 @@
-.blackdiv{
+.blackdiv {
     position: fixed;
     top: 0%;
     left: 0%;
@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
 }
-.info-container{
+.info-container {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -17,20 +17,20 @@
     z-index: 2;
     justify-content: center;
 }
-.info-container h1{
+.info-container h1 {
     text-align: center;
     margin-bottom: 1rem;
     color: #ffffff;
 }
-.info-container p{
+.info-container p {
     font-size: 1rem;
     font-weight: bolder;
     color: #a7a7a7;
 }
-.info-container button{
-    background-color: #DDE6ED;
+.info-container button {
+    background-color: #dde6ed;
     color: #242424;
-    box-shadow: 0 0px 3px #DDE6ED;
+    box-shadow: 0 0px 3px #dde6ed;
     cursor: pointer;
     border: 0px;
     padding: 2rem;
@@ -39,6 +39,4 @@
     font-weight: bolder;
     margin: 0 auto;
     margin-top: 1rem;
-
-
 }

@@ -1,6 +1,6 @@
-.TodoList{
+.TodoList {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    justify-content:space-around;
+    justify-content: space-around;
 }

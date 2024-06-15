@@ -1,23 +1,22 @@
-.loadingContainer{
+.loadingContainer {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 
     z-index: 2;
     margin-top: 3rem;
     height: 18.6rem;
     width: 360px;
 }
-.loadingContainer .loadingDot{
+.loadingContainer .loadingDot {
     position: relative;
     background-color: #2a2a2a;
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
     margin: 0.5rem;
-
 }
-#firstDot{
+#firstDot {
     animation-name: elevate2;
     animation-duration: 500ms;
     animation-iteration-count: infinite;
@@ -26,17 +25,17 @@
 
 @keyframes elevate1 {
     0% {
-      top: 0;
+        top: 0;
     }
     50% {
-      top: -10px;
+        top: -10px;
     }
     100% {
-      top: 0;
+        top: 0;
     }
-  }
+}
 
-  #secondDot{
+#secondDot {
     animation-name: elevate1;
     animation-duration: 500ms;
     animation-iteration-count: infinite;
@@ -45,20 +44,20 @@
 
 @keyframes elevate2 {
     0% {
-      top: 0;
+        top: 0;
     }
     25% {
-      top: -3px;
+        top: -3px;
     }
     50% {
         top: -10px;
-      }
-    100% {
-      top: 0;
     }
-  }
+    100% {
+        top: 0;
+    }
+}
 
-  #thirdDot{
+#thirdDot {
     animation-name: elevate2;
     animation-duration: 500ms;
     animation-iteration-count: infinite;
@@ -67,12 +66,12 @@
 
 @keyframes elevate3 {
     0% {
-      top: 0;
+        top: 0;
     }
     50% {
-      top: -10px;
+        top: -10px;
     }
     100% {
-      top: 0;
+        top: 0;
     }
-  }
+}
