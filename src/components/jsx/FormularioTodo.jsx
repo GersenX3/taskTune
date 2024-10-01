@@ -1,73 +1,68 @@
-import React from 'react'
+import React from 'react';
 import { TodoContext } from '../../Context/TodoContext';
-import "../css/FormularioTodo.css"
+import '../css/FormularioTodo.css';
 
- function FormularioTodo() {
-    const {
-        addTodo,
-        setOpenModal,
-        buttonTask,
-        setButtonTask,
-      } = React.useContext(TodoContext);
+function FormularioTodo() {
+    const { addTodo, setOpenModal, setButtonTask } =
+        React.useContext(TodoContext);
 
-      const onSubmit = (event)=>{
+    const onSubmit = (event) => {
         event.preventDefault();
-        if(newTodoValue.length==0){
-          console.log("No se agrego");
-        }
-        else{
-          addTodo(newTodoValue);
+        if (newTodoValue.length == 0) {
+            console.log('No se agrego');
+        } else {
+            addTodo(newTodoValue);
         }
         setOpenModal(false);
         setButtonTask(false);
     };
-    const [newTodoValue, setNewTodoValue] = React.useState("");
-
+    const [newTodoValue, setNewTodoValue] = React.useState('');
 
     const handleKeyPress = (event) => {
-      if (event.key === 'Enter') {
-        onSubmit(event);
-      }
+        if (event.key === 'Enter') {
+            onSubmit(event);
+        }
     };
 
-  return (
-    <>
-        <div id='blackout'
-        onClick={() => {
-          setOpenModal(false);
-          setButtonTask(false);
-        }}
-        ></div>
-        <div className='formTodo'>
-            <form onSubmit={onSubmit}
-                  onKeyDown={handleKeyPress}
-            >
-                <div id='divLabel'>
-                <label htmlFor="">Write your new task</label>
-                </div>
-                <textarea
-                    maxLength="24"
-                    placeholder='Play Catsoul'
-                    value={newTodoValue}
-                    onChange={(event)=>{
-                        setNewTodoValue(event.target.value);
-                      }}
-                />
-                <button
+    return (
+        <>
+            <div
+                id="blackout"
                 onClick={() => {
-                  setOpenModal(false);
-                  setButtonTask(false);
+                    setOpenModal(false);
+                    setButtonTask(false);
                 }}
-                type='button'
-                className='cancel'>Cancel</button>
-                <button
-                type='submit'
-                className='create'>Create</button>
-
-            </form>
-        </div>
-    </>
-  )
+            ></div>
+            <div className="formTodo">
+                <form onSubmit={onSubmit} onKeyDown={handleKeyPress}>
+                    <div id="divLabel">
+                        <label htmlFor="">Write your new task</label>
+                    </div>
+                    <textarea
+                        maxLength="24"
+                        placeholder="Play Catsoul"
+                        value={newTodoValue}
+                        onChange={(event) => {
+                            setNewTodoValue(event.target.value);
+                        }}
+                    />
+                    <button
+                        onClick={() => {
+                            setOpenModal(false);
+                            setButtonTask(false);
+                        }}
+                        type="button"
+                        className="cancel"
+                    >
+                        Cancel
+                    </button>
+                    <button type="submit" className="create">
+                        Create
+                    </button>
+                </form>
+            </div>
+        </>
+    );
 }
 
-export {FormularioTodo}
+export { FormularioTodo };

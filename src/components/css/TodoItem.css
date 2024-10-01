@@ -1,75 +1,75 @@
-.item{
+.item {
     text-decoration: none;
     width: 350px;
     padding: 0.5rem;
-    background: rgb(41,41,41);
+    background: rgb(41, 41, 41);
 
     border-radius: 5px;
     margin: 1rem;
     font-size: 1rem;
     text-align: center;
     box-shadow: 0px 1px 10px rgba(32, 35, 41, 0.15);
-    text-shadow: 1px 0px 15px rgba(0,0,0,0.73);
+    text-shadow: 1px 0px 15px rgba(0, 0, 0, 0.73);
     transition: all 1s ease;
 }
-@media(min-width: 300px) and (max-width: 400px){
-    .item{
+@media (min-width: 300px) and (max-width: 400px) {
+    .item {
         width: 320px;
     }
 }
-.item--completed{
-    background: rgba(18,18,18,1);
+.item--completed {
+    background: rgba(18, 18, 18, 1);
     transition: all 1s ease;
 }
-.item--completed p{
+.item--completed p {
     text-decoration: line-through;
     transition: all 1s ease;
     color: #a7a7a7;
 }
-.item--completed img{
+.item--completed img {
     filter: brightness(0.5);
     transition: all 1s ease;
 }
-.item--completed .songInfo span{
-    color: #5a5a5a;    
+.item--completed .songInfo span {
+    color: #5a5a5a;
 }
 
-.item li{
+.item li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-#palomita{
+#palomita {
     position: absolute;
     margin-right: 16rem;
 }
-#palomita:hover{
+#palomita:hover {
     cursor: pointer;
 }
-#tache{
+#tache {
     position: absolute;
     margin-left: 18rem;
-    color:  black;
+    color: black;
 }
-#tache:hover{
+#tache:hover {
     cursor: pointer;
 }
-.songInfo{
+.songInfo {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.songInfo span{
+.songInfo span {
     color: #a7a7a7;
 }
-.songInfo img{
+.songInfo img {
     height: 48px;
     padding-left: 0.7rem;
     margin-right: 0.5rem;
 }
-.songInfo a{
+.songInfo a {
     height: 48px;
     width: 48px;
     margin-right: 0.5rem;

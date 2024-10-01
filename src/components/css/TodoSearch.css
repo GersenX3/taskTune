@@ -1,11 +1,11 @@
-.buscador{
+.buscador {
     display: flex;
     width: 100%;
 
     justify-content: center;
     height: 2rem;
 }
-.buscador input{
+.buscador input {
     padding: 2px;
     font-size: 20px;
     border-width: 1px;
@@ -20,4 +20,4 @@
 .buscador input:focus {
     outline-color: #fff;
     outline-width: 0.5px;
-  }
+}

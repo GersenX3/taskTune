@@ -1,4 +1,4 @@
-.app{
+.app {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -7,10 +7,9 @@
     background-color: #000;
     width: 80vw;
     border-radius: 12px;
-
 }
-@media(min-width: 300px) and (max-width: 440px){
-    .app{
+@media (min-width: 300px) and (max-width: 440px) {
+    .app {
         width: 90vw;
     }
 }

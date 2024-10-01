@@ -1,8 +1,4 @@
-import React from 'react'
-
 function TodosError() {
-  return (
-    <div>TodosErroe</div>
-  )
+    return <div>TodosErroe</div>;
 }
-export {TodosError}
+export { TodosError };

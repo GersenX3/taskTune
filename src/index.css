@@ -38,22 +38,26 @@
     --decorative-subdued: #292929;
 */
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-  font-size: 62.5%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: rgb(25,99,51);
-  background: linear-gradient(30deg, rgba(25,99,51,1) 0%, rgba(25,20,20,1) 100%);
-  background-attachment: fixed;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: #fff;
+body {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(25, 99, 51);
+    background: linear-gradient(
+        30deg,
+        rgba(25, 99, 51, 1) 0%,
+        rgba(25, 20, 20, 1) 100%
+    );
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
 }
-body h1{
-  color: #a7a7a7;
+body h1 {
+    color: #a7a7a7;
 }
