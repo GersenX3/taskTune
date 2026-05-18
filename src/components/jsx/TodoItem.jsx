@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../css/TodoItem.css';
 import { Palomita } from '../svg/Palomita';
 import { Tache } from '../svg/Tache';
+import { ITunesLogo } from '../svg/ITunesLogo';
 
 function TodoItem(props) {
     const [album, setAlbum] = useState(
@@ -12,29 +13,21 @@ function TodoItem(props) {
     const [enlace, setEnlace] = useState('');
 
     useEffect(() => {
-        let token = props.accessToken;
-
-        //Obtener el nombre de la cancio, link y foto.
-        let parameters = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + token,
-            },
-        };
+        const query = encodeURIComponent(props.texto);
 
         fetch(
-            'https://api.spotify.com/v1/search?q=' +
-                props.texto +
-                '&type=track&limit=1',
-            parameters
+            `https://itunes.apple.com/search?term=${query}&media=music&entity=song&limit=1`
         )
             .then((response) => response.json())
             .then((data) => {
-                setAlbum(data.tracks.items[0].album.images[2].url);
-                setCancion(data.tracks.items[0].name);
-                setArtista(data.tracks.items[0].artists[0].name);
-                setEnlace(data.tracks.items[0].external_urls.spotify);
+                if (data.results && data.results.length > 0) {
+                    const track = data.results[0];
+                    const artwork = track.artworkUrl100.replace('100x100', '300x300');
+                    setAlbum(artwork);
+                    setCancion(track.trackName);
+                    setArtista(track.artistName);
+                    setEnlace(track.trackViewUrl);
+                }
             });
     }, []);
 
@@ -57,8 +50,8 @@ function TodoItem(props) {
                     {' '}
                     {cancion} | {artista}
                 </span>
-                <a href={enlace} target="_blank" rel="noreferrer">
-                    <img src={'/img/spotifyLogo.png'} alt="Spotify Logo" />
+                <a href={enlace} target="_blank" rel="noreferrer" className="apple-music-link">
+                    <ITunesLogo />
                 </a>
             </div>
         </div>

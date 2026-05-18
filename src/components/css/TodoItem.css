@@ -74,3 +74,11 @@
     width: 48px;
     margin-right: 0.5rem;
 }
+.apple-music-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    text-decoration: none;
+}

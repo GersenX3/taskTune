@@ -12,7 +12,7 @@ import { Modal } from './components/jsx/Modal';
 import { FormularioTodo } from './components/jsx/FormularioTodo';
 import { Info } from './components/jsx/Info';
 
-function AppUI({ accessToken }) {
+function AppUI() {
     const {
         loading,
         error,
@@ -29,7 +29,7 @@ function AppUI({ accessToken }) {
             <TodoCounter />
             <TodoSearch />
 
-            <TodoList accessToken={accessToken}>
+            <TodoList>
                 {loading && <TodosLoading />}
                 {error && <TodosError />}
                 {!loading && searchedTodos.length == 0 && <TodosEmpty />}
@@ -37,7 +37,6 @@ function AppUI({ accessToken }) {
                     !error &&
                     searchedTodos.map((todo) => (
                         <TodoItem
-                            accessToken={accessToken}
                             key={todo.text}
                             texto={todo.text}
                             completed={todo.finished}
